@@ -1,5 +1,5 @@
 <?php
-$connect = mysql_connect('localhost', 'root', 'zakala2711');
+$connect = mysql_connect('localhost', 'root', 'root');
 $wybierzBaze = mysql_select_db('system_ticket');
 
 if(!$connect)
@@ -26,7 +26,7 @@ function zapiszDane()
 	$haslo = $_POST['haslo'];
 	$mail = $_POST['mail'];
 
-$zapisz = mysql_query("INSERT INTO uzytkownik SET imie='".$imie."', nazwisko='".nazwisko."', login='".$login."', haslo='".$haslo."', mail='".$mail."'");
+$zapisz = mysql_query("INSERT INTO uzytkownik SET imie='".$imie."', nazwisko='".$nazwisko."', login='".$login."', haslo='".$haslo."', mail='".$mail."'");
 
 if(!$zapisz)
 	{
