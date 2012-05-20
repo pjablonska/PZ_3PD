@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS `uzytkownik` (
   `haslo` varchar(15) COLLATE utf8_polish_ci NOT NULL,
   `mail` varchar(25) COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=1 ;
 

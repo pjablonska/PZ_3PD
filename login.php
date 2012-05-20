@@ -2,23 +2,23 @@
 
 session_start();
 
-if (isset($_POST['konto']) and isset($_POST['haslo']) )
+if (isset($_POST['login']) and isset($_POST['haslo']) )
 
 {
 
-require('conn.php');
+require('config.php');
 
-$konto=mysql_real_escape_string(trim($_POST['konto']));
+$login=mysql_real_escape_string(trim($_POST['login']));
 
-$password=mysql_real_escape_string(trim($_POST['haslo']));
+$haslo=mysql_real_escape_string(trim($_POST['haslo']));
 
-if ($konto!="" and $password!="")
+if ($login!="" and $haslo!="")
 
 {
 
-   $password = sha1($password);
+   $haslo = sha1($haslo);
 
-   $zapytanie="SELECT id FROM uzytkownik WHERE login='$konto' and haslo ='$password'";
+   $zapytanie="SELECT id FROM uzytkownik WHERE login='$login' and haslo ='$haslo'";
 
    $temp=mysql_query($zapytanie) or die("Wystąpił błąd");
 
@@ -53,21 +53,22 @@ else{
 ?>
 
 <html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<form  action="ticket.html" method="post">
+<title>Logowanie</title>
+<body bgcolor="teal" text="white">
+<h1>Logowanie</h1><br><br>
 
-<body>
-
-<form  action="login.php" method="post">
-
-<strong>Login:</strong><input name="login" type="text" value="" /><br>
-
-<strong>Haslo:</strong><input name="haslo" type="password" value="" /><br>
-
-<input type="submit" value="Zaloguj" />
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td>Login</td><td><input type="text" name="Login" value="" /></td></tr>
+<tr><td>Hasło</td><td><input type="password" name="haslo" value="" /></td></tr>
+<tr><td></td><td><input type="submit" name="submit" value="Zaloguj" /></td></tr>
 
 </form>
 
 </body>
-
+</head>
 </html>
 
 <?php
