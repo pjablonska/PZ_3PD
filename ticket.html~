@@ -1,0 +1,26 @@
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+<title>Zgłaszanie problemu</title>
+<body bgcolor="teal" text="white">
+<center><h1>Wypełnij formularz zwiazany z problemem</h1><br><br>
+<form action="ticket.php" method="GET">
+Osoba zgłaszająca:<br><input type=txt name="Osoba>"><br><br>
+Budynek:<br>
+<input type="radio" name="Budynek" value="A"> A
+<input type="radio" name="Budynek" value="B"> B
+<input type="radio" name="Budynek" value="C"> C
+<input type="radio" name="Budynek" value="D"> D
+<input type="radio" name="Budynek" value="E"> E<br><br>
+Piętro:<br>
+<input type="radio" name="Pietro" value="0"> 0
+<input type="radio" name="Pietro" value="1"> 1
+<input type="radio" name="Pietro" value="2"> 2
+<input type="radio" name="Pietro" value="3"> 3<br><br>
+Nr sali:<br><input type=txt name="Nr_sali"><br>
+Rodzaj sprzętu:<br><input type=txt name="Rodzaj"><br>
+Opis problemu:<br><input type="longtext" wrap=virtual name="Opis" maxlength="300" style="height: 100px"><br>
+<input type="submit" name="submit" value="Zatwierdź" /></center> 
+</form>
+</body>
+</head>

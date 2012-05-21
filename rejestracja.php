@@ -7,6 +7,10 @@ define('DB_PASS','root'); //wpisz hasło dla tego użytkownika
 define('DB_DB','system_ticket');
 
 
+
+
+
+
 //inkludujemy plik z hasłami
 
 //include("conf.php");
