@@ -4,11 +4,16 @@
 <title>Start</title>
 <body bgcolor="teal" text="white">
 <center><h2>Witamy w systemie zgłaszania usterek na Wydziale Matematyki i Informatyki</h2><br><br>
-<table cellpadding="0" cellspacing="0" border="0">
-<tr><td>Login</td><td><input type="text" name="Login" value="" /></td></tr>
-<tr><td>Hasło</td><td><input type="password" name="haslo" value="" /></td></tr>
-<tr><td></td><td><input type="submit" name="submit" value="Zaloguj" /></td></tr>
-<tr><td>Jeśli nie masz konta &nbsp;&nbsp;</td><td><a href="rejestracja.html">Zarejestruj się</a></td></tr>
+<form method='POST' action='login.php'>
+<b>Login:</b> <input type='text' name='login'><br>
+<b>Hasło:</b> <input type='password' name='haslo'><br>
+<input type='submit' value='Wyślij' name='wyslij'>
+<input type='submit' value='Wyloguj' name='wyloguj'>
+</form>  
+
+
+<b>Jeśli nie masz konta: &nbsp;&nbsp;</b><a href="rejestracja.html">Zarejestruj się</a>
+
 </body>
 </head>
 </html>
