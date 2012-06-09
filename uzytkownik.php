@@ -1,16 +1,11 @@
+<?php
+include("config.php");
+?>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <body bgcolor="teal" text="white">
 </head> 
 <?php
-
-$connect = mysql_connect('localhost', 'root', 'root');
-$wybierzBaze = mysql_select_db('system_ticket');
-
-if(!$connect)
-{
-	echo "Błąd podczas połączenia z bazą. Sprawdź parametry połączenia.";
-}
 
 if(isset($_POST['submit']))//sprawdzamy, czy wszystkie pola wypełnione
 {
@@ -40,7 +35,9 @@ if(!$zapisz)
 
 	} else {
 		echo "Dane zostały zapisane!";
+echo'<meta http-equiv="Refresh" content="1; url=tytulowa.html" />';	
 	}
+
 }
 
 ?>
