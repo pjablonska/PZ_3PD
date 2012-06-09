@@ -5,7 +5,6 @@
 <body bgcolor="teal" text="white">
 <center><h1>Wypełnij formularz związany z problemem</h1><br><br>
 <form action="ticket.php" method="POST">
-Osoba:<br><input type="text" name="Osoba" value=""><br><br>
 Budynek:<br>
 <input type="radio" name="Budynek" value="A"> A
 <input type="radio" name="Budynek" value="B"> B
@@ -18,9 +17,14 @@ Piętro:<br>
 <input type="radio" name="Pietro" value="2"> 2
 <input type="radio" name="Pietro" value="3"> 3<br><br>
 Nr sali:<br><input type="text" name="Nr_sali"><br>
-Rodzaj sprzętu:<br><input type="text" name="Rodzaj"><br>
+Rodzaj awarii:<br><select name="Rodzaj">
+<option>Komputer w sali</option>
+<option>Awaria komputera pracownika</option>
+<option>Awaria sieci</option>
+<option>Inne</option>
+</select><br>
 Opis problemu:<br><input type="longtext" wrap=virtual name="Opis" maxlength="300" style="height: 100px"><br>
-<input type="submit" name="submit" value="Zatwierdź" /></center> 
+<button type="submit" name="submit" value="Zatwierdź"><b>Zatwierdź</b></center> 
 </form>
 </body>
 </head>
