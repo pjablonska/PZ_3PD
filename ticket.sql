@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 28 May 2012, 11:30
+-- Czas wygenerowania: 28 May 2012, 11:12
 -- Wersja serwera: 5.1.58
 -- Wersja PHP: 5.3.6-13ubuntu3.6
 
@@ -34,19 +34,16 @@ CREATE TABLE IF NOT EXISTS `ticket` (
   `Nr_sali` int(11) NOT NULL,
   `Rodzaj` varchar(30) COLLATE utf8_polish_ci NOT NULL,
   `Opis` longtext COLLATE utf8_polish_ci NOT NULL,
+  `Status` varchar(50) COLLATE utf8_polish_ci NOT NULL,
   PRIMARY KEY (`ID_ticketu`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `ticket`
 --
 
 INSERT INTO `ticket` (`ID_ticketu`, `Osoba`, `Budynek`, `Pietro`, `Nr_sali`, `Rodzaj`, `Opis`) VALUES
-(1, '', 'B', 2, 1, 'drgd', 'fdfs'),
-(2, '', 'C', 2, 0, 'hu', 'ht'),
-(3, 'dwsd', 'D', 2, 0, 'hu', 'ht'),
-(4, 'dwsd', 'D', 2, 0, 'hu', 'ht'),
-(5, 'twsrw', 'B', 1, 2, 'gdg', 'gdgdf');
+(0, '', 'B', 2, 1, 'drgd', 'fdfs');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
