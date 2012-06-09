@@ -1,18 +1,15 @@
 <?php
 include("config.php");
 ?>
-
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-</head> 
+<body bgcolor="teal" text="white">
+</head>  
 <?php
-
-
-
 
 if(isset($_POST['submit']))//sprawdzamy, czy wszystkie pola wypełnione
 {
-	if(empty($_POST['Osoba']) || empty($_POST['Budynek']) || empty($_POST['Pietro']) || empty($_POST['Nr_sali']) || empty($_POST['Rodzaj']) || empty($_POST['Opis']))
+	if(empty($_POST['Budynek']) || empty($_POST['Pietro']) || empty($_POST['Nr_sali']) || empty($_POST['Rodzaj']) || empty($_POST['Opis']))
 
 
 	{
@@ -27,7 +24,8 @@ if(isset($_POST['submit']))//sprawdzamy, czy wszystkie pola wypełnione
 
 function zapiszDane()
 {
-        $Osoba = $_POST['Osoba'];
+session_start();
+        $Osoba = $_SESSION['login'];
 	$Budynek = $_POST['Budynek'];
 	$Pietro = $_POST['Pietro'];
 	$Nr_sali = $_POST['Nr_sali'];
@@ -35,8 +33,20 @@ function zapiszDane()
 	$Opis = $_POST['Opis'];
 
 $zapisz = mysql_query("INSERT INTO ticket SET Osoba='".$Osoba."', Budynek='".$Budynek."', Pietro='".$Pietro."', Nr_sali='".$Nr_sali."', Rodzaj='".$Rodzaj."', Opis='".$Opis."'");
-echo "Dane zostały zapisane!";
+
+
+
+
+if(!$zapisz)
+	{
+		echo "Dane nie zostały zapisane.";
+
+	} else {
+		echo "Dane zostały zapisane!";
+echo '<meta http-equiv="Refresh" content="1; url=Panel_uzytkownika.php" />';
 	}
+
+}
 
 
 ?>
